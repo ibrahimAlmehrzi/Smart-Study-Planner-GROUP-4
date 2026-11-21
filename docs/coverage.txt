@@ -1,0 +1,8 @@
+$ python tests/measure_coverage.py
+Module                                 Run  Coverage
+app/planning/priority.py           20/  20  100.0%
+app/planning/scheduler.py          98/ 102   96.1%
+app/planning/reschedule.py         19/  19  100.0%
+app/plan_service.py                75/  95   78.9%
+Total                             212/ 236   89.8%
+Tests run: 32, failures: 0, errors: 0

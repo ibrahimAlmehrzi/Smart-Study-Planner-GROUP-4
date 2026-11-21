@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in – Smart Study Planner</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="login">
+<div class="login-wrap"><div class="login">
+  <div class="intro">
+    <div style="font-size:26px;font-weight:bold;color:#1f2a44">📘 Smart Study Planner</div>
+    <p style="margin-top:14px;font-size:15px;color:#334155;line-height:1.6">Plan your study around your real deadlines. Missed a session? We move it for you.</p>
+    <ul style="margin:18px 0 0 18px;font-size:14px;color:#334155;line-height:1.9"><li>Tasks ranked by grade weight and deadline</li><li>Automatic rescheduling</li><li>Review sessions before exams</li></ul>
+  </div>
+  <div class="form">
+    <form id="loginForm">
+      <h1>Log in</h1>
+      <label for="le">University email</label><input id="le" name="email" type="email" autocomplete="username" required>
+      <label for="lp">Password</label><input id="lp" name="password" type="password" autocomplete="current-password" required>
+      <div id="loginError" class="msg bad hidden" role="alert" style="margin-top:10px"></div>
+      <div style="margin:12px 0;text-align:right"><a href="#" id="toForgot">Forgot password?</a></div>
+      <button type="submit" style="width:100%;padding:11px">Log in</button>
+      <p style="text-align:center">New here? <a href="#" id="toRegister"><b>Create an account</b></a></p>
+    </form>
+    <form id="registerForm" class="hidden" novalidate>
+      <h1>Create an account</h1>
+      <label for="rn">Full name</label><input id="rn" name="full_name" autocomplete="name"><div class="err" data-err="full_name"></div>
+      <label for="re">University email</label><input id="re" name="email" type="email" autocomplete="email"><div class="err" data-err="email"></div>
+      <label for="rp">Password (8+ characters, letters and numbers)</label><input id="rp" name="password" type="password" autocomplete="new-password"><div class="err" data-err="password"></div>
+      <button type="submit" style="width:100%;padding:11px;margin-top:14px">Create account</button>
+      <p style="text-align:center"><a href="#" class="toLogin">Back to log in</a></p>
+    </form>
+    <form id="forgotForm" class="hidden">
+      <h1>Reset your password</h1>
+      <p class="muted">Enter your email. We will send a link that works once and expires in 30 minutes.</p>
+      <label for="fe">University email</label><input id="fe" name="email" type="email" required>
+      <button type="submit" style="width:100%;padding:11px;margin-top:14px">Send reset link</button>
+      <p style="text-align:center"><a href="#" class="toLogin">Back to log in</a></p>
+    </form>
+    <form id="resetForm" class="hidden">
+      <h1>Choose a new password</h1>
+      <label for="np">New password</label><input id="np" name="password" type="password" autocomplete="new-password" required>
+      <button type="submit" style="width:100%;padding:11px;margin-top:14px">Save password</button>
+    </form>
+  </div>
+</div></div>
+<script src="/js/app.js"></script>
+</body>
+</html>

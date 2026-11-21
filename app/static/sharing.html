@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sharing – Smart Study Planner</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="sharing">
+<div class="app">
+<nav class="side" id="side" aria-label="Main menu"></nav>
+<main>
+<div class="top"><h1>Share Progress with Advisor</h1><span id="status"></span></div>
+<div class="row">
+  <div class="grow">
+    <div class="card"><h2>Find your advisor</h2>
+      <label for="search">Name or university email</label><input id="search" placeholder="e.g. hassan" autocomplete="off">
+      <div id="results" style="margin-top:8px"></div>
+      <div style="text-align:right;margin-top:10px"><button id="confirm" disabled>Confirm sharing</button></div></div>
+    <div class="card" style="margin-top:12px"><h2>Consent history</h2>
+      <table><thead><tr><th>Advisor</th><th>Granted</th><th>Revoked</th><th>Status</th></tr></thead><tbody id="history"></tbody></table></div>
+  </div>
+  <div style="width:290px;flex:none">
+    <div class="card" style="line-height:1.8"><h2>What your advisor can see</h2>✅ Session completion rate<br>✅ Study streak<br>✅ Number of overdue tasks
+      <h2 style="margin-top:12px">What stays private</h2>🚫 Task titles and notes<br>🚫 Your timetable<br>🚫 Courses and grade weights</div>
+    <div class="card" style="margin-top:12px"><h2>Your data</h2><p class="muted">Download everything the planner stores about you.</p><button class="ghost" id="exportData">⬇ Download my data (CSV)</button> <button class="red" id="deleteAccount">Delete my account</button></div>
+  </div>
+</div>
+</main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>

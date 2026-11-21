@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Availability – Smart Study Planner</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="availability">
+<div class="app">
+<nav class="side" id="side" aria-label="Main menu"></nav>
+<main>
+<div class="top"><h1>Weekly Availability</h1><span class="muted" id="weekTotal"></span></div>
+<div class="row">
+  <div class="grow">
+    <div class="card"><h2>Free time each week</h2><table><tbody id="blocks"></tbody></table>
+      <form id="blockForm" style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-top:10px">
+        <div><label for="bd">Day</label><select id="bd" name="day_of_week"><option value="0">Monday</option><option value="1">Tuesday</option><option value="2">Wednesday</option><option value="3">Thursday</option><option value="4">Friday</option><option value="5">Saturday</option><option value="6">Sunday</option></select></div>
+        <div><label for="bs">From</label><input id="bs" name="start_time" type="time" value="16:00" required></div>
+        <div><label for="be">To</label><input id="be" name="end_time" type="time" value="18:00" required></div>
+        <button class="ghost" type="submit">+ Add free block</button></form>
+      <p class="muted">Add or remove blocks, then press <b>Save availability</b>.</p></div>
+    <div class="card" style="margin-top:12px"><h2>Busy events (the planner will not use this time)</h2>
+      <table><tbody id="busyRows"></tbody></table>
+      <form id="busyForm" style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-top:10px">
+        <div><label for="bt">Title</label><input id="bt" name="title" placeholder="Work shift" required></div>
+        <div><label for="bf">Start</label><input id="bf" name="start_at" type="datetime-local" required></div>
+        <div><label for="bu">End</label><input id="bu" name="end_at" type="datetime-local" required></div>
+        <button class="ghost" type="submit">+ Add busy event</button></form></div>
+  </div>
+  <form class="card" id="settingsForm" style="width:270px;flex:none" novalidate><h2>Study settings</h2>
+    <label for="s1">Maximum study hours per day</label><input id="s1" name="daily_study_limit" type="number" step="0.5" min="0.5" max="12"><div class="err" data-err="daily_study_limit"></div>
+    <label for="s2">Session length (minutes)</label><select id="s2" name="session_length"><option>25</option><option>30</option><option>45</option><option>50</option><option>60</option><option>90</option><option>120</option></select><div class="err" data-err="session_length"></div>
+    <label for="s3">Reminder before session (minutes)</label><select id="s3" name="reminder_lead_time"><option>5</option><option>10</option><option>15</option><option>30</option><option>60</option></select>
+    <label for="s4">Quiet hours start</label><input id="s4" name="quiet_hours_start" type="time">
+    <label for="s5">Quiet hours end</label><input id="s5" name="quiet_hours_end" type="time">
+    <button type="submit" style="width:100%;margin-top:14px">Save availability</button></form>
+</div>
+</main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>

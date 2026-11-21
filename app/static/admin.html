@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Console – Smart Study Planner</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="admin">
+<div class="app">
+<nav class="side" id="side" aria-label="Main menu"></nav>
+<main>
+<div class="top"><h1>Admin Console</h1><button class="ghost" id="runJobs">Run background jobs now</button></div>
+<div class="grid g4" id="stats"></div>
+<div style="display:flex;gap:10px;margin-top:12px">
+  <input id="q" placeholder="🔍 Search by name or email" aria-label="Search users" style="flex:1">
+  <select id="role" aria-label="Role filter" style="width:150px"><option value="">Role: all</option><option value="student">Student</option><option value="advisor">Advisor</option><option value="admin">Admin</option></select>
+  <select id="status" aria-label="Status filter" style="width:160px"><option value="">Status: all</option><option value="active">Active</option><option value="locked">Locked</option><option value="deactivated">Deactivated</option></select></div>
+<div class="card" style="margin-top:10px;overflow-x:auto"><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody id="users"></tbody></table></div>
+<div class="card" style="margin-top:12px"><h2>Recent log</h2><pre id="logs" style="font-size:12px;white-space:pre-wrap;margin:0;max-height:220px;overflow:auto"></pre></div>
+</main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>
